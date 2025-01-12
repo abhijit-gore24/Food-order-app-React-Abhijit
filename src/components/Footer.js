@@ -11,6 +11,7 @@ import {
   faRedhat,
   faAws,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,14 +19,12 @@ const Footer = () => {
       <div className="footer-container">
         {/* Company Info Section */}
         <div className="footer-section about">
-          <h2>Abhijit App</h2>
+          <h2 className="footer-logo">Abhijit App</h2>
           <p>
             Abhijit Gore, an accomplished software developer based in Pune with
-            2.5+ years of experience. I specialize in frontend development
-            with Angular and React, backend work using Java and Spring Boot, and
-            have expertise in DevOps practices. I hold multiple
-            certifications, including AWS and Microsoft, showcasing my
-            commitment to growth.
+            2.5+ years of experience. Specializing in frontend development with
+            Angular and React, backend expertise in Java and Spring Boot, and
+            certified in AWS and Microsoft DevOps practices.
           </p>
         </div>
 
@@ -34,19 +33,19 @@ const Footer = () => {
           <h2>Quick Links</h2>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Services</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <Link to="/cart">Cart</Link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <Link to="/data">Data Page</Link>
             </li>
           </ul>
         </div>
@@ -82,13 +81,13 @@ const Footer = () => {
             >
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
-            <a href="#" aria-label="faRedhat" className="icon-black">
+            <a href="#" aria-label="Redhat" className="icon-black">
               <FontAwesomeIcon icon={faRedhat} size="2x" />
             </a>
-            <a href="#" aria-label="faFacebook" className="icon-black">
+            <a href="#" aria-label="Facebook" className="icon-black">
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
-            <a href="#" aria-label="fa-Aws" className="icon-black">
+            <a href="#" aria-label="AWS" className="icon-black">
               <FontAwesomeIcon icon={faAws} size="2x" />
             </a>
           </div>

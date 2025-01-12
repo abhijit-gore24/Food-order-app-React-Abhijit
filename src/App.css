@@ -39,20 +39,31 @@
   color: #007bff;
 }
 
-/* Container for multiple cards *//* Container for multiple cards */
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
 /* Container for multiple cards */
 .resto-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between cards */
-  justify-content: flex-start; /* Align items to the left */
-  padding: 25px;
-  margin-right:  -100px;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 16px; /* Add spacing between items */
+  justify-content: space-between; /* Distribute items evenly */
+  padding: 45px; /* Optional padding */
+}
+
+.resto-container > div {
+  flex: 1 1 calc(25% - 16px); /* Adjust the width for 4 cards in a row */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  min-width: 250px; /* Set a minimum width for cards */
+  max-width: 300px; /* Optional: Limit max width */
 }
 
 /* Card Container */
 .res-card {
-  flex-basis: 20%; /* Set the basis for each card to be 22% of the row */
+  flex-basis: 20%; /* Set the basis for each card to be 20% of the row */
   height: 300px; /* Set a consistent height for the card */
   border: 1px solid #da3333;
   border-radius: 12px;
@@ -65,11 +76,13 @@
   flex-direction: column;
   padding: 15px;
 }
+
 /* Hover Effect */
 .res-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
 /* Restaurant Image */
 .res-img {
   width: 100%;
@@ -78,6 +91,7 @@
   border-radius: 8px;
   margin-bottom: 12px;
 }
+
 /* Restaurant Name */
 .res-name {
   font-size: 1.1em;
@@ -95,26 +109,22 @@
   text-align: center;
 }
 
-/* Rating and Delivery Time Container */
-.details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 8px;
-}
-
-/* Rating */
-.rating, .delivery-time {
+/* Rating and Delivery Time */
+.rating,
+.delivery-time {
   background-color: #f9f9f9;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 0.9em;
   color: #333;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
   font-weight: bold;
+  justify-content: center;
+  margin: 5px auto; /* Center align */
+  display: flex;
+    justify-content: center;
 }
 
 .rating::before {
@@ -126,7 +136,6 @@
   content: "⏱️";
   color: #4caf50;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -147,6 +156,7 @@
   }
 }
 
+/* Buttons */
 .button-42 {
   background-color: #ff5C00;
   border: 2px solid #ff5C00;
@@ -176,18 +186,26 @@
   cursor: pointer;
   margin-top: -2px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 .button3 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #ff5C00;
-} 
+}
 
-.search-text{
+/* Search Text */
+.search-text {
   padding: 13px;
-    
-     color: black;
-     font-family: "Graphik", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin-left: 25px;
+  color: black;
+  font-family: "Graphik", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* Logged In User */
+.loggedInUser {
+  color: rgb(214, 8, 8);
+  background-color: white;
+  font-weight: 700;
+  pointer-events: none;
 }

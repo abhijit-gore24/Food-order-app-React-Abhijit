@@ -1,0 +1,102 @@
+/* General container styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Main card container */
+.card {
+  background: #fff;
+  border: 2px solid red; /* Red border */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Increased width */
+  margin: 30px auto;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: auto;
+}
+
+/* Add hover effect */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Header styles */
+.card h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #555;
+}
+
+.card p {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Card-specific button styling */
+.card-button {
+  padding: 12px 24px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.card-button:focus {
+  outline: none;
+}
+
+/* Align user data in a card view */
+.card-details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.card-details p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* Links inside card */
+.card a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .card-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,5 @@
+
+.help-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits the text color from the parent (optional) */
+}

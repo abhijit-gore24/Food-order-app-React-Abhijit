@@ -52,6 +52,9 @@ const DataPage = () => {
               {/* Dynamically load description */}
               {restaurant?.description && <p>{restaurant?.description}</p>}
 
+              {/* Dynamically load description */}
+              {restaurant?.description && <p>{restaurant?.location?.address}</p>}
+
               {/* Any additional data to display */}
               {restaurant?.accessibility?.altText && (
                 <p>Cousine: {restaurant?.accessibility?.altText}</p>
@@ -61,7 +64,7 @@ const DataPage = () => {
               {restaurant?.action?.link && (
                 <button
                   className="button-42"
-                  href={restaurant?.action?.link}
+                  href={restaurant?.cta?.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

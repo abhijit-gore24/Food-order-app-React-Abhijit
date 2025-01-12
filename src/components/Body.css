@@ -59,3 +59,48 @@ margin-left: 27px;
   border: 2px solid #ad1010;
 }
 
+.restaurant-card-container {
+  position: relative; /* Ensures the promoted label is positioned relative to the card */
+  margin-bottom: 20px; /* Add spacing between cards */
+}
+
+.ribbon-2 {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+  color: #F6F9FE;
+  position: absolute;
+  inset: var(--t) calc(-1*var(--f)) auto auto;
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2));
+  background: #BD1550;
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+  font-family: cursive;
+  z-index: 1000;
+  transition: all 0.3s ease; /* Optional smooth transitions */
+}
+
+.ribbon-2:hover {
+  background: #BD1550; /* Retain hover styles */
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+  color: #F6F9FE;
+}
+
+.parent-container {
+  position: relative; /* Ensure proper positioning */
+  overflow: visible; /* Prevent clipping of the ribbon */
+}
+.offline {
+  margin: 150px 100px 150px 250px; /* Shorthand for margin-top, right, bottom, left */
+  color: red; /* Text color */
+  background: url('https://img.freepik.com/free-vector/offline-twitch-banner-gammer-style_23-2148604432.jpg?t=st=1736578794~exp=1736582394~hmac=20072f3c86af19a24a073136d566485f1ad9d364b184ebf3ae8c91c0cfc4b073&w=2000') 
+    no-repeat center center / cover; /* Ensures the image covers the area and is centered */
+  padding: 20px; /* Add some inner spacing */
+  border: 2px solid #ccc; /* Optional border for clarity */
+  border-radius: 10px; /* Optional rounded corners */
+  text-align: center; /* Center-align text inside the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle effect */
+}
