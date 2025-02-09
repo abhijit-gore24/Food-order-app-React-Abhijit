@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Header from "./components/Header";
